@@ -33,7 +33,7 @@ val movieline = input.map(line => MovieLine(line))
 movieline.toDF().registerTempTable("MovieLine")
  
 val test = spark.sql("select *  from MovieLine")
-test.show()
+//test.show()
 
 //input.flatMap { line => line.split(";")}.map {word => (word,1)}.reduceByKey(_+_).saveAsTextFile("/Users/kirand/Documents/Movieswordcountfile.txt")
   
@@ -41,11 +41,11 @@ test.show()
  
  
   
- // val rd1 = sc.range(1,10)
+  val rd1 = sc.range(1,10)
   
- // rd1.collect.foreach(println)
+  rd1.collect.foreach(println)
   
- //  sc.stop
+   sc.stop
   
  
   
